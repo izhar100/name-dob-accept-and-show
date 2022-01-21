@@ -1,0 +1,25 @@
+//Question:WAP to accept first name,last name and date of birth and show full name and show day,month and year seprately.
+#include <stdio.h>
+
+int main()
+{
+    char fname[15];
+    char lname[15];
+    char fullname[30];
+    char dob[20];
+    printf("Enter your first name:");
+    scanf("%s",&fname);
+    printf("\nEnter Your last name:");
+    scanf("%s",&lname);
+    printf("\nEnter Your date of birth in DD/MM/YYYY:");
+    scanf("%s",&dob);
+    strcpy(fullname,fname);
+    strcat(fullname," ");
+    strcat(fullname,lname);
+    printf("\nYour Full name is:%s",fullname);
+    printf("\nDate of birth in day,Month and year\n");
+    printf("Day:%.2s",dob);
+    printf("\nMonth:%.*s",2,dob+3);
+    printf("\nYear:%.*s",4,dob+6);
+    return 0;
+}
